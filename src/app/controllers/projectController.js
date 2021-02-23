@@ -37,6 +37,7 @@ router.get("/:projectId", async (req, res) => {
 //CREATE
 router.post("/", async (req, res) => {
   try {
+    //consertar task recebendo undefined
     const { title, description, tasks } = req.body;
 
     const project = await Project.create({
